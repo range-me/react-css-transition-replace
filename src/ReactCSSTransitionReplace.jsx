@@ -89,8 +89,19 @@ export default class ReactCSSTransitionReplace extends React.Component {
       });
     }
 
+    // Let's not break everything if React triggers re-render (e.g. when
+    // user - mostly Capybara - manages to modify a field value) while
+    // animation is still in progress.
+    const animatedChild = this.state.animatedTo;
+    if (animatedChild && nextChild && nextChild.key === animatedChild.key) {
+      return this.setState({
+        currentChild: nextChild
+      });
+    }
+
     // Set the next child to start the transition, and set the current height.
     this.setState({
+      animatedTo: nextChild,
       nextChild,
       height: this.state.currentChild ? ReactDOM.findDOMNode(this.refs.curr).offsetHeight : 0
     });
