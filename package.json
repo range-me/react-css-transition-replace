@@ -8,20 +8,21 @@
     "url": "https://github.com/marnusw/react-css-transition-replace.git"
   },
   "scripts": {
+    "install": "./node_modules/.bin/babel ./src --out-dir ./lib",
     "test": "echo \"No test implemented\" && exit 0",
     "prebuild": "rm -rf lib && gulp lint",
     "build": "./node_modules/.bin/babel ./src --out-dir ./lib",
     "prepublish": "npm run build"
   },
   "dependencies": {
-    "react-addons-css-transition-group": "^0.14.0"
+    "react-addons-css-transition-group": "^0.14.0",
+    "babel": "^5.8.23"
   },
   "peerDependencies": {
     "react": "^0.14.0",
     "react-dom": "^0.14.0"
   },
   "devDependencies": {
-    "babel": "^5.8.23",
     "babel-eslint": "^4.1.3",
     "babelify": "^6.3.0",
     "browser-sync": "^2.9.11",
