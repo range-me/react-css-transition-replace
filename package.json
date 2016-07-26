@@ -8,7 +8,6 @@
     "url": "https://github.com/marnusw/react-css-transition-replace.git"
   },
   "scripts": {
-    "install": "./node_modules/.bin/babel ./src --out-dir ./lib",
     "test": "echo \"No test implemented\" && exit 0",
     "prebuild": "rm -rf lib && gulp lint",
     "build": "./node_modules/.bin/babel ./src --out-dir ./lib",

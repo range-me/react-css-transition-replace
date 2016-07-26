@@ -2,8 +2,8 @@
 /node_modules
 npm-debug.log
 
-# Exclude compiled files
-/lib
+# Include compiled files for npm guthub installation - more robust than specifying an "install" npm script
+#/lib
 
 /demo/assets/app.js
 /gh-pages
