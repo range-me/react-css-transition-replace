@@ -8,7 +8,7 @@
     "url": "https://github.com/marnusw/react-css-transition-replace.git"
   },
   "scripts": {
-    "install": "echo \"doing nothing...\""
+    "install": "echo \"doing nothing...\"",
     "test": "echo \"No test implemented\" && exit 0",
     "prebuild": "echo \"doing nothing...\"",
     "build": "echo \"doing nothing...\"",
