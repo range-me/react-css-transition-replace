@@ -8,10 +8,13 @@
     "url": "https://github.com/marnusw/react-css-transition-replace.git"
   },
   "scripts": {
+    "install": "echo \"doing nothing...\""
     "test": "echo \"No test implemented\" && exit 0",
-    "prebuild": "rm -rf lib && gulp lint",
-    "build": "./node_modules/.bin/babel ./src --out-dir ./lib",
-    "prepublish": "npm run build"
+    "prebuild": "echo \"doing nothing...\"",
+    "build": "echo \"doing nothing...\"",
+    "prepublish": "npm run rangeme-build",
+    "rangeme-prebuild": "rm -rf lib && gulp lint",
+    "rangeme-build": "npm run rangeme-prebuild && ./node_modules/.bin/babel ./src --out-dir ./lib"
   },
   "dependencies": {
     "react-addons-css-transition-group": "^0.14.0"
